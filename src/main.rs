@@ -9,10 +9,11 @@ pub type Result<T> = std::result::Result<T, Error>;
 
 fn main() -> Result<()> {
     let args: Vec<String> = std::env::args().collect();
-    if let Ok(c_a) = args::process_args(&args) {
-        match c_a {
-            
-        }
+    match args::process_args(&args) {
+        Ok(command_args) => {
+            println!("J");
+        },
+        Err(e) => return Err(e),
     }
 
 

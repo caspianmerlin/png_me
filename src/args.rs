@@ -70,10 +70,10 @@ pub enum PngMeArgs {
 }
 
 pub struct EncodeArgs {
-    path: String,
-    chunk_type: String,
-    message: String,
-    output_file: Option<String>,
+    pub path: String,
+    pub chunk_type: String,
+    pub message: String,
+    pub output_file: Option<String>,
 }
 impl EncodeArgs {
     pub fn new(args: &[String]) -> Result<Self> {

@@ -95,8 +95,8 @@ impl EncodeArgs {
 }
 
 pub struct DecodeArgs {
-    path: String,
-    chunk_type: String,
+    pub path: String,
+    pub chunk_type: String,
 }
 impl DecodeArgs {
     pub fn new(args: &[String]) -> Result<Self> {
@@ -115,8 +115,8 @@ impl DecodeArgs {
 }
 
 pub struct RemoveArgs {
-    path: String,
-    chunk_type: String,
+    pub path: String,
+    pub chunk_type: String,
 }
 impl RemoveArgs {
     pub fn new(args: &[String]) -> Result<Self> {
@@ -135,7 +135,7 @@ impl RemoveArgs {
 }
 
 pub struct PrintArgs {
-    path: String,
+    pub path: String,
 }
 impl PrintArgs {
     pub fn new(args: &[String]) -> Result<Self> {

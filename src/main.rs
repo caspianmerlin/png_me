@@ -11,12 +11,13 @@ fn main() -> Result<()> {
     let args: Vec<String> = std::env::args().collect();
     match args::process_args(&args) {
         Ok(command_args) => {
-            println!("J");
+            match commands::process_command(command_args) {
+                Ok(_) => return Ok(()),
+                Err(e) => println!("{}", e),
+            };
         },
-        Err(e) => return Err(e),
+        Err(e) => println!("{}", e),
     }
-
-
 
     Ok(())
 }
